@@ -1,1 +1,247 @@
-[["Rust](https://img.shields.io/badge/Rust-2021-orange?logo=rust)](https://www.rust-lang.org/)\n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)\n[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)]()\n\n---\n\n### \ud83d\udd2e Can you read minds? Prove it!\n\n*A thrilling two-player number guessing game built with pure Rust*\n\n</div>\n\n---\n\n## \u2728 Features\n\n| Feature | Description |\n|---------|-------------|\n| \ud83c\udfaf **Smart Hints** | Get granular feedback - from \"Way too high\" to \"Very close!", "Privacy Mode** | Screen clears between players so no cheating! |\n| \ud83c\udfb2 **Auto-Fallback** | Invalid secret number? No problem - we'll pick a random one! |\n| \u26a1 **Fast & Lightweight** | Zero dependencies except `rand` - runs instantly! |\n| \ud83c\udf10 **Bilingual Hints** | English + Hindi for that extra flavor! |\n\n---\n\n## \ud83d\ude80 Quick Start\n\n```bash\n# Clone the repo\ngit clone https://github.com/yourusername/Guessing_Game.git\ncd Guessing_Game\n\n# Run the game\ncargo run\n```\n\nThat's it! No installation, no setup, just pure gaming bliss. \ud83c\udf89\n\n---\n\n## \ud83d\udcd6 How to Play\n\n1. **Player 1** enters a secret number (1-500)\n2. Screen clears automatically \ud83e\uddf9\n3. **Player 2** has **10 attempts** to guess it!\n4. Receive hints based on how close you are:\n   - \ud83d\udd34 **Way too high/low** (gap \u2265 250)\n   - \ud83d\udfe0 **Too high/low** (gap \u2265 125)\n   - \ud83d\udfe1 **Bit high/low** (gap \u2265 10)\n   - \ud83d\udfe2 **Very close!** (gap < 10)\n5. Win or lose - either way, it's fun! \ud83c\udfc6\n\n---\n\n## \ud83c\udfaf Hint System\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502  GAP SIZE          \u2502  HINT MESSAGE                      \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502  0                 \u2502  \ud83c\udf89 YOU WON!!                       \u2502\n\u2502  1 - 9             \u2502  \ud83d\udfe2 Very close to the number       \u2502\n\u2502  10 - 124          \u2502  \ud83d\udfe1 Bit high / Bit low             \u2502\n\u2502  125 - 249         \u2502  \ud83d\udfe0 Too high / Too low             \u2502\n\u2502  250+              \u2502  \ud83d\udd34 Way too high / Way too low     \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n---\n\n## \ud83d\udcf8 Gameplay Preview\n\n```\n========================================\n   WELCOME TO THE GUESSING GAME   \n========================================\nRules:\n1. Guess a number between 1 and 500.\n2. You have 10 attempts.\n3. Hints will guide you if you are high or low.\n4. If you get 'Very Close', you are within \u00b110.\n========================================\n\nPlayer 1, please enter the secret number (1\u2013500):\n[Screen clears...]\n\nPlease Input Your Number Gentleman:\n250\n[Hint] Too high hai thoda niche aao\nYour total guesses left: 9\n\nPlease Input Your Number Gentleman:\n200\n[Hint] Very close to the number\nYour total guesses left: 8\n\nPlease Input Your Number Gentleman:\n197\nYou won!! Congratulations \ud83c\udf89\n```\n\n---\n\n## \ud83d\udee0\ufe0f Tech Stack\n\n- **Language**: [Rust](https://www.rust-lang.org/) \ud83e\udd80\n- **Edition**: 2021\n- **Dependencies**: \n  - [`rand`](https://crates.io/crates/rand) ^0.8.5\n\n---\n\n## \ud83d\udcc1 Project Structure\n\n```\nGuessing_Game/\n\u251c\u2500\u2500 src/\n\u2502   \u2514\u2500\u2500 main.rs          # Game logic & UI\n\u251c\u2500\u2500 Cargo.toml           # Project configuration\n\u251c\u2500\u2500 Cargo.lock           # Dependency lock file\n\u251c\u2500\u2500 .gitignore           # Git ignore rules\n\u2514\u2500\u2500 README.md            # This file\n```\n\n---\n\n## \ud83c\udfae Game Logic\n\nThe game uses a smart enum-based hint system:\n\n```rust\nenum Guess {\n    Correct,      // \ud83c\udf89 Perfect guess!\n    TooMuchHigh,  // \ud83d\udd34 Way too high\n    TooHigh,      // \ud83d\udfe0 Too high\n    BitHigh,      // \ud83d\udfe1 Slightly high\n    TooMuchLow,   // \ud83d\udd34 Way too low\n    TooLow,       // \ud83d\udfe0 Too low\n    BitLow,       // \ud83d\udfe1 Slightly low\n    VeryClose,    // \ud83d\udfe2 Within \u00b110!\n}\n```\n\n---\n\n## \ud83e\udd1d Contributing\n\nGot ideas to make this game even better? \n\n1. Fork it \ud83c\udf74\n2. Create your feature branch (`git checkout -b feature/AmazingFeature`)\n3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)\n4. Push to the branch (`git push origin feature/AmazingFeature`)\n5. Open a Pull Request \ud83c\udf89\n\n---\n\n## \ud83d\udcdd License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n\n---\n\n## \ud83d\ude4f Acknowledgments\n\n- Built with \u2764\ufe0f using [Rust](https://www.rust-lang.org/)\n- Inspired by classic number guessing games\n- Special thanks to the Rust community! \ud83e\udd80\n\n---\n\n<div align=\"center", "Star this repo if you had fun playing! \u2b50\n\nMade with \ud83e\udd80 Rust and \u2615 Coffee\n\n[![GitHub stars](https://img.shields.io/github/stars/ZaifMirza/Guessing_Game?style=social)](https://github.com/ZaifMirza/Guessing_Game/stargazers)\n[![GitHub forks](https://img.shields.io/github/forks/ZaifMirza/Guessing_Game?style=social)](https://github.com/ZaifMirza/Guessing_Game/network/members)\n\n</div>"]]
+# 🎯 Number Guessing Game
+
+[![Rust](https://img.shields.io/badge/Rust-2021-orange?logo=rust)](https://www.rust-lang.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)]()
+
+---
+
+## ✨ Can You Read Minds? Prove It!
+
+*A thrilling two-player number guessing game built with pure Rust*
+
+---
+
+## 🚀 Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎯 **Smart Hints** | Get granular feedback - from "Way too high" to "Very close!" |
+| 🕵️ **Privacy Mode** | Screen clears between players so no cheating! |
+| 🎲 **Auto-Fallback** | Invalid secret number? No problem - we'll pick a random one! |
+| ⚡ **Fast & Lightweight** | Zero dependencies except `rand` - runs instantly! |
+| 🌐 **Bilingual Hints** | English + Hindi for that extra flavor! |
+
+---
+
+## 🏃 Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/ZaifMirza/Guessing_Game.git
+cd Guessing_Game
+
+# Run the game
+cargo run
+```
+
+That's it! No installation, no setup, just pure gaming bliss. 🎉
+
+---
+
+## 📖 How to Play
+
+1. **Player 1** enters a secret number (1-500)
+2. Screen clears automatically 🙈
+3. **Player 2** has **10 attempts** to guess it!
+4. Receive hints based on how close you are:
+   - 🔴 **Way too high/low** (gap ≥ 250)
+   - 🟠 **Too high/low** (gap ≥ 125)
+   - 🟡 **Bit high/low** (gap ≥ 10)
+   - 🟢 **Very close!** (gap < 10)
+5. Win or lose - either way, it's fun! 🏆
+
+---
+
+## 🎯 Hint System
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  GAP SIZE          │  HINT MESSAGE                              │
+├────────────────────┼────────────────────────────────────────────┤
+│  0                 │  🎉 YOU WON!!                              │
+│  1 - 9             │  🟢 Very close to the number               │
+│  10 - 124          │  🟡 Bit high / Bit low                     │
+│  125 - 249         │  🟠 Too high / Too low                     │
+│  250+              │  🔴 Way too high / Way too low             │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🎮 Gameplay Preview
+
+```
+========================================
+   WELCOME TO THE GUESSING GAME   
+========================================
+Rules:
+1. Guess a number between 1 and 500.
+2. You have 10 attempts.
+3. Hints will guide you if you are high or low.
+4. If you get 'Very Close', you are within ±10.
+========================================
+
+Player 1, please enter the secret number (1–500):
+[Screen clears...]
+
+Please Input Your Number Gentleman:
+250
+[Hint] High hai thoda niche aao
+Your total guesses left: 9
+
+Please Input Your Number Gentleman:
+200
+[Hint] You are very close to the number
+Your total guesses left: 8
+
+Please Input Your Number Gentleman:
+197
+You won!! Congratulations 🎉
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language**: [Rust](https://www.rust-lang.org/) 🦀
+- **Edition**: 2021
+- **Dependencies**: 
+  - [`rand`](https://crates.io/crates/rand) ^0.8.5
+
+---
+
+## 📁 Project Structure
+
+```
+Guessing_Game/
+├── src/
+│   └── main.rs          # Game logic & UI
+├── Cargo.toml           # Project configuration
+├── Cargo.lock           # Dependency lock file
+├── .gitignore           # Git ignore rules
+└── README.md            # This file
+```
+
+---
+
+## 💻 Code Overview
+
+### Main Components
+
+#### 1. Guess Enum (`src/main.rs:5-14`)
+The game uses a smart enum-based hint system:
+
+```rust
+enum Guess {
+    Correct,      // 🎉 Perfect guess!
+    ToomuchHigh,  // 🔴 Way too high
+    TooHigh,      // 🟠 Too high
+    BitHigh,      // 🟡 Slightly high
+    ToomuchLow,   // 🔴 Way too low
+    TooLow,       // 🟠 Too low
+    BitLow,       // 🟡 Slightly low
+    Veryclose,    // 🟢 Within ±10!
+}
+```
+
+#### 2. Screen Clearing (`src/main.rs:16-21`)
+Clears the terminal screen to prevent Player 2 from seeing the secret number:
+
+```rust
+fn clear_screen() {
+    // Works on Linux/macOS
+    Command::new("clear").status().unwrap();
+    // For Windows, uncomment this:
+    // Command::new("cmd").args(&["/C", "cls"]).status().unwrap();
+}
+```
+
+#### 3. Main Game Logic (`src/main.rs:23-139`)
+- Welcomes players and displays rules
+- Reads secret number from Player 1
+- Clears screen for privacy
+- Manages 10 attempts for Player 2
+- Provides intelligent hints based on guess distance
+- Handles win/lose conditions
+
+### Key Functions
+
+| Function | Purpose |
+|----------|---------|
+| `clear_screen()` | Clears terminal for privacy between players |
+| `main()` | Main game loop and logic |
+
+### Game Flow
+
+```
+┌─────────────────┐
+│  Start Game     │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│ Player 1 Enters │
+│ Secret Number   │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  Clear Screen   │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  Player 2       │
+│  Makes Guess    │
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  Calculate Gap  │
+│  & Show Hint    │
+└────────┬────────┘
+         ▼
+    ┌────┴────┐
+    │Win/Lose?│
+    └────┬────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+  WIN       LOSE
+```
+
+---
+
+## 🤝 Contributing
+
+Got ideas to make this game even better?
+
+1. Fork it 🍴
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request 🎉
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with ❤️ using [Rust](https://www.rust-lang.org/)
+- Inspired by classic number guessing games
+- Special thanks to the Rust community! 🦀
+
+---
+
+<div align="center">
+
+Star this repo if you had fun playing! ⭐
+
+Made with 🦀 Rust and ☕ Coffee
+
+[![GitHub stars](https://img.shields.io/github/stars/ZaifMirza/Guessing_Game?style=social)](https://github.com/ZaifMirza/Guessing_Game/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ZaifMirza/Guessing_Game?style=social)](https://github.com/ZaifMirza/Guessing_Game/network/members)
+
+</div>
